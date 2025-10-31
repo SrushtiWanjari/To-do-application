@@ -4,12 +4,11 @@ import axios from "axios";
 import { Link } from "react-router";
 import DelIcon from "../../assets/DeleteIcon.png";
 import toast, { Toaster } from "react-hot-toast";
-import API_BASE_URL from "../../api"; // ✅ import added
+import API_BASE_URL from "../../api";
 
 function Home() {
   const [todos, setTodos] = useState([]);
 
-  // Fetch todos
   const loadTodos = async () => {
     try {
       const response = await axios.get(`${API_BASE_URL}/todos`);
@@ -23,7 +22,6 @@ function Home() {
     loadTodos();
   }, []);
 
-  // Delete todo
   const deleteTodo = async (id) => {
     try {
       const response = await axios.delete(`${API_BASE_URL}/todos/${id}`);
