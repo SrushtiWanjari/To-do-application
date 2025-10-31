@@ -1,3 +1,22 @@
+// import express from "express";
+// import dotenv from "dotenv";
+// import cors from "cors";
+
+// dotenv.config();
+
+// const app = express();
+
+// app.use(cors({
+//   origin: "https://to-do-frontend-theta-five.vercel.app"
+// }));
+
+// // app.use(cors({
+// //   origin: process.env.CORS_ORIGIN
+// // }));
+
+// app.use(express.json());
+
+
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -6,13 +25,22 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: "https://to-do-frontend-theta-five.vercel.app"
-}));
+// ✅ CORS FIX
+const allowedOrigins = [
+  "https://to-do-application-qnhv.onrender.com",
+  "http://localhost:5173"
+];
 
-// app.use(cors({
-//   origin: process.env.CORS_ORIGIN
-// }));
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 
 app.use(express.json());
 
