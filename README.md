@@ -27,7 +27,7 @@ Below are some screenshots of the application:
 ![Home Page](/client/src/assets/Screenshot%20(127).png)
 
 ### ➕ Add New Task Page
-![Add Task Page](/client/src/assets/Screenshot%20(126).png)
+![Add Task Page](/client/src/assets/Screenshot%20(128).png)
 
 ---
 
