@@ -1,0 +1,51 @@
+body{
+   background-color: #739EC9;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.new-todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 350px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+  margin: 150px auto;
+  border-radius: 20px;
+  background-color: #FFE8DB;
+}
+
+.input-box {
+  height: 25px;
+  font-size: 15px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.select-box {
+  height: 30px;
+  font-size: 15px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.emoji-box {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  height: 30px;
+  width: 120px;
+  padding: 10px auto;
+  font-size: 15px;
+  margin: 5px auto;
+  border-radius: 10px;
+  font-weight: bold;
+}
